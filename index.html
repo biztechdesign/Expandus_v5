@@ -298,7 +298,7 @@ ul{list-style:none}
 .rdt__stages-wrap::-webkit-scrollbar-track{background:var(--gray-100)}
 .rdt__stages-wrap::-webkit-scrollbar-thumb{background:var(--purple);border-radius:2px}
 
-.rdt__stages{display:grid;grid-template-columns:repeat(6,1fr);min-width:900px}
+.rdt__stages{display:grid;grid-template-columns:repeat(6,minmax(190px,1fr));min-width:1140px}
 .rdt__stage{padding:24px 16px;border-right:1px solid var(--gray-200);transition:background var(--t);position:relative;display:flex;flex-direction:column}
 .rdt__stage:last-child{border-right:none}
 .rdt__stage:hover{background:#f0f2f5}
@@ -327,7 +327,8 @@ ul{list-style:none}
 .rdt__stage__lnk:hover{color:var(--plum)}
 .rdt__stage--chasm .rdt__stage__lnk{color:var(--coral)}
 .rdt__stage--chasm .rdt__stage__lnk:hover{color:var(--coral-hover)}
-/* Stage cards — always show content */
+/* Stage cards — show lead + read more only */
+.rdt__stage__desc,.rdt__stage__foot,.rdt__stage__sub,.rdt__trap{display:none}
 .rdt__stage__lnk{margin-top:auto;padding-top:14px}
 
 .rdt__insight{margin-top:36px;background:var(--purple-tint);border-left:4px solid var(--purple);padding:14px 24px;position:relative;overflow:hidden;isolation:isolate}
@@ -923,7 +924,7 @@ ul{list-style:none}
             <li>Finance</li>
           </ul>
           <p class="rdt__stage__foot">The business and the founder are the same thing.</p>
-          <a href="red-dot-theory.html#stage-1" class="rdt__stage__lnk">Read More →</a>
+          <a href="red-dot-theory.html#stage-1" class="rdt__stage__lnk">Read More</a>
         </div>
 
         <!-- Stage 2 -->
@@ -936,7 +937,7 @@ ul{list-style:none}
             <li>Everyone depends on the founder.</li>
             <li>The founder remains the centre of all decisions.</li>
           </ul>
-          <a href="red-dot-theory.html#stage-2" class="rdt__stage__lnk">Read More →</a>
+          <a href="red-dot-theory.html#stage-2" class="rdt__stage__lnk">Read More</a>
         </div>
 
         <!-- Stage 3 -->
@@ -950,7 +951,7 @@ ul{list-style:none}
             <li>Work accumulates around the founder.</li>
             <li>The organisation struggles to scale.</li>
           </ul>
-          <a href="red-dot-theory.html#stage-3" class="rdt__stage__lnk">Read More →</a>
+          <a href="red-dot-theory.html#stage-3" class="rdt__stage__lnk">Read More</a>
         </div>
 
         <!-- Stage 4 — CHASM -->
@@ -964,7 +965,7 @@ ul{list-style:none}
             <li>Businesses get stuck here.</li>
             <li>Revenue may grow. Organisational maturity does not.</li>
           </ul>
-          <a href="red-dot-theory.html#stage-4" class="rdt__stage__lnk">Read More →</a>
+          <a href="red-dot-theory.html#stage-4" class="rdt__stage__lnk">Read More</a>
           <div class="rdt__trap">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm-.75 3.5h1.5v5h-1.5v-5zm0 6h1.5v1.5h-1.5V10.5z"/></svg>
             The Trap That Stops Scaling
@@ -988,7 +989,7 @@ ul{list-style:none}
               </ul>
             </li>
           </ul>
-          <a href="red-dot-theory.html#stage-5" class="rdt__stage__lnk">Read More →</a>
+          <a href="red-dot-theory.html#stage-5" class="rdt__stage__lnk">Read More</a>
         </div>
 
         <!-- Stage 6 -->
@@ -1008,7 +1009,7 @@ ul{list-style:none}
             </li>
             <li>The business has become institution-led rather than founder-led.</li>
           </ul>
-          <a href="red-dot-theory.html#stage-6" class="rdt__stage__lnk">Read More →</a>
+          <a href="red-dot-theory.html#stage-6" class="rdt__stage__lnk">Read More</a>
         </div>
 
       </div>
