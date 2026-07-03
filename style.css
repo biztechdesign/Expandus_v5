@@ -806,7 +806,7 @@ ul   { list-style:none }
 .ecard__day     { font-family:var(--font-h); font-size:26px; font-weight:800; line-height:1; color:var(--plum) }
 .ecard__mon     { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--coral); margin-top:3px }
 .ecard__body    { padding:18px }
-.ecard__title   { font-family:var(--font-h); font-size:18px; font-weight:700; color:var(--plum); margin-bottom:12px; line-height:1.4 }
+.ecard__title   { font-family:var(--font-h); font-weight:700; color:var(--plum); margin-bottom:12px; line-height:1.4 }
 .ecard__meta    { display:flex; flex-direction:column; gap:5px; margin-bottom:14px }
 .ecard__meta-row{ display:flex; align-items:center; gap:8px; font-size:14px; color:var(--gray-600) }
 .ecard__meta-row svg { width:14px; height:14px; color:var(--purple); flex-shrink:0 }
@@ -855,7 +855,7 @@ ul   { list-style:none }
 .wwd__step:hover { box-shadow:var(--sh-hover); transform:translateY(-2px) }
 .wwd__step::after { content:''; position:absolute; top:8px; right:8px; width:30px; height:30px; background:url('img/shape.svg') top right / 100% 100% no-repeat; pointer-events:none }
 .wwd__step-head  { display:flex; align-items:center; gap:12px; margin-bottom:14px }
-.wwd__step-title { font-family:var(--font-display); font-size:18px; font-weight:700; color:var(--plum); margin:0 0 6px; line-height:1.4 }
+.wwd__step-title { font-family:var(--font-display); font-weight:700; color:var(--plum); margin:0 0 6px; line-height:1.4 }
 .wwd__step-desc  { font-size:16px; color:var(--gray-600); line-height:1.7; margin:0 }
 
 /* Feature icon — layered shape */
@@ -925,7 +925,7 @@ ul   { list-style:none }
 .approach__grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:4px }
 .acard { border:none; padding:32px 24px; text-align:left; background:var(--plum); border-radius:var(--radius-lg); box-shadow:0 6px 20px rgba(34,19,49,0.22); transition:transform 0.25s ease,box-shadow 0.25s ease,background 0.25s ease }
 .acard:hover { background:var(--plum-soft); transform:translateY(-7px) scale(1.02); box-shadow:0 16px 40px rgba(34,19,49,0.32) }
-.acard h5    { font-family:var(--font-display); font-size:18px; font-weight:700; color:#fff; margin:0 0 10px; line-height:1.4 }
+.acard h5    { font-family:var(--font-display); font-weight:700; color:#fff; margin:0 0 10px; line-height:1.4 }
 .acard>p     { font-size:16px; color:rgba(255,255,255,0.68); line-height:1.7; margin:0 }
 
 /* ══════════════════════════════════════
@@ -940,7 +940,7 @@ ul   { list-style:none }
 .icard__overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(10,5,25,0.88) 0%,rgba(10,5,25,0.35) 55%,rgba(10,5,25,0.1) 100%); transition:background 0.35s ease }
 .icard:hover .icard__overlay { background:linear-gradient(to top,rgba(10,5,25,0.95) 0%,rgba(10,5,25,0.65) 55%,rgba(10,5,25,0.25) 100%) }
 .icard__content { position:relative; z-index:1; padding:32px; width:100% }
-.icard__title   { font-family:var(--font-display); font-size:22px; font-weight:700; color:#fff; margin-bottom:0; transition:margin-bottom 0.3s ease }
+.icard__title   { font-family:var(--font-display); font-weight:700; color:#fff; margin-bottom:0; transition:margin-bottom 0.3s ease }
 .icard:hover .icard__title { margin-bottom:12px }
 .icard__hover   { overflow:hidden; max-height:0; opacity:0; transition:max-height 0.4s ease,opacity 0.3s ease }
 .icard:hover .icard__hover { max-height:160px; opacity:1 }
@@ -996,7 +996,7 @@ ul   { list-style:none }
 }
 .rcard__icon svg { position:relative; z-index:2; width:45px; height:45px; stroke:var(--plum); fill:none; stroke-width:1; stroke-linecap:round; stroke-linejoin:round }
 .rcard__icon.icon-c1{--icon-bg-color:#E2A7C8}.rcard__icon.icon-c2{--icon-bg-color:#A7ADE2}.rcard__icon.icon-c3{--icon-bg-color:#DBE2A7}.rcard__icon.icon-c4{--icon-bg-color:#B4E2A7}.rcard__icon.icon-c5{--icon-bg-color:#E2A7A7}.rcard__icon.icon-c6{--icon-bg-color:#A7C5E2}.rcard__icon.icon-c7{--icon-bg-color:#E2C6A7}.rcard__icon.icon-c8{--icon-bg-color:#C1A7E2}
-.rcard h5    { font-family:var(--font-display); font-size:18px; font-weight:700; color:var(--plum); margin-bottom:10px; line-height:1.4 }
+.rcard h5    { font-family:var(--font-display); font-weight:700; color:var(--plum); margin-bottom:10px; line-height:1.4 }
 .rcard p     { font-size:16px; color:#666; line-height:1.7; margin-bottom:18px; flex:1 }
 .rcard__lnk  { font-family:var(--font-body); font-size:16px; font-weight:500; color:var(--purple); display:inline-flex; align-items:center; gap:4px; text-decoration:none; transition:color var(--t); margin-top:auto }
 .rcard__lnk:hover { color:var(--purple-hover) }
@@ -1208,13 +1208,14 @@ ul   { list-style:none }
   .stat-item__num{font-size:28px}
   :root{--text-body-lg:14px}
   .wwd__step-desc,.acard>p,.tcard__q,.rcard p,.icard__hover p,.footer__links a,.rdt__stage__lead,.rdt__insight p,.footer__brand p{font-size:14px}
+  .rcard__lnk,.ecard__reg,.rdt__stage__lnk{font-size:14px}
+  .btn{font-size:14px}
   .sec__hd p{font-size:15px}.sec__hd p.sec__desc,.sec__desc{font-size:16px}
   .wwd__stat-card strong{font-size:20px}
   .fcta__left h2{font-size:clamp(22px,6vw,32px)}
   .approach__circles-row{grid-template-columns:repeat(2,1fr)}
   .approach__grid{grid-template-columns:1fr}
   .approach__timeline-row{grid-template-columns:1fr 1fr}
-  .acard h5{font-size:15px}
   .nav__inner{padding:0 16px}
   .nav__logo img{height:44px}
   .trust__item{flex:0 0 50%}
