@@ -632,7 +632,7 @@ ul   { list-style:none }
   background:url('img/shape.svg') top right / 100% 100% no-repeat;
   pointer-events:none;
 }
-.tstrip__inner { display:flex; align-items:stretch; max-width:100%; margin:0; padding:40px var(--container-pad); background:var(--plum); border-radius:var(--radius-lg) 0 var(--radius-lg) var(--radius-lg); position:relative }
+.tstrip__inner { display:flex; align-items:stretch; max-width:100%; margin:0; padding:40px 0; background:var(--plum); border-radius:var(--radius-lg) 0 var(--radius-lg) var(--radius-lg); position:relative }
 .tstrip__item  { flex:1; padding:0 28px }
 .tstrip__div   { width:1px; background:rgba(255,255,255,.15); flex-shrink:0 }
 .tstrip__heading { display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap }
@@ -750,7 +750,7 @@ ul   { list-style:none }
   width:30px; height:30px;
   background:url('img/shape.svg') top right / 100% 100% no-repeat; pointer-events:none;
 }
-.rdt__insight p             { font-family:var(--font-body); font-size:16px; color:var(--plum); line-height:1.75; margin:0 0 8px }
+.rdt__insight p             { font-family:var(--font-body); font-size:16px; color:var(--plum); line-height:1.7; margin:0 0 8px }
 .rdt__insight p:first-child { font-weight:400 }
 .rdt__insight p:last-child  { margin-bottom:0; font-weight:400 }
 
@@ -851,7 +851,7 @@ ul   { list-style:none }
 .wwd__step::after { content:''; position:absolute; top:8px; right:8px; width:30px; height:30px; background:url('img/shape.svg') top right / 100% 100% no-repeat; pointer-events:none }
 .wwd__step-head  { display:flex; align-items:center; gap:12px; margin-bottom:14px }
 .wwd__step-title { font-family:var(--font-display); font-size:18px; font-weight:700; color:var(--plum); margin:0 0 6px; line-height:1.4 }
-.wwd__step-desc  { font-size:16px; color:var(--gray-600); line-height:1.6; margin:0 }
+.wwd__step-desc  { font-size:16px; color:var(--gray-600); line-height:1.7; margin:0 }
 
 /* Feature icon — layered shape */
 .wwd__feat-icon {
@@ -921,7 +921,7 @@ ul   { list-style:none }
 .acard { border:none; padding:32px 24px; text-align:left; background:var(--plum); border-radius:var(--radius-lg); box-shadow:0 6px 20px rgba(34,19,49,0.22); transition:transform 0.25s ease,box-shadow 0.25s ease,background 0.25s ease }
 .acard:hover { background:var(--plum-soft); transform:translateY(-7px) scale(1.02); box-shadow:0 16px 40px rgba(34,19,49,0.32) }
 .acard h5    { font-family:var(--font-display); font-size:18px; font-weight:700; color:#fff; margin:0 0 10px; line-height:1.4 }
-.acard>p     { font-size:15px; color:rgba(255,255,255,0.68); line-height:1.65; margin:0 }
+.acard>p     { font-size:16px; color:rgba(255,255,255,0.68); line-height:1.7; margin:0 }
 
 /* ══════════════════════════════════════
    17. INDUSTRIES
@@ -939,7 +939,7 @@ ul   { list-style:none }
 .icard:hover .icard__title { margin-bottom:12px }
 .icard__hover   { overflow:hidden; max-height:0; opacity:0; transition:max-height 0.4s ease,opacity 0.3s ease }
 .icard:hover .icard__hover { max-height:160px; opacity:1 }
-.icard__hover p { font-size:16px; color:rgba(255,255,255,0.82); line-height:1.65; margin:0 0 16px }
+.icard__hover p { font-size:16px; color:rgba(255,255,255,0.82); line-height:1.7; margin:0 0 16px }
 .icard__link    { font-family:var(--font-body); font-size:14px; font-weight:400; color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:6px; transition:color var(--t) }
 .icard__link:hover { color:var(--coral) }
 
@@ -963,7 +963,7 @@ ul   { list-style:none }
 .tdot    { width:8px; height:8px; border-radius:50%; background:var(--gray-300); cursor:pointer; transition:all 0.3s ease; border:none; padding:0 }
 .tdot.active { background:var(--purple); width:24px; border-radius:4px }
 
-.tcard__q         { font-size:16px; color:#555; line-height:1.75; margin-bottom:20px; font-style:italic }
+.tcard__q         { font-size:16px; color:#555; line-height:1.7; margin-bottom:20px; font-style:italic }
 .tcard__q::before { content:'"'; display:block; font-size:52px; color:var(--purple); font-family:var(--font-h); font-weight:800; line-height:1; margin-bottom:8px }
 .tcard__author    { display:flex; align-items:center; gap:12px; border-top:1px solid var(--gray-200); padding-top:16px; margin-top:16px }
 .tcard__avatar    { width:48px; height:48px; border-radius:50%; object-fit:cover; flex-shrink:0; background:var(--purple-tint) }
@@ -992,7 +992,7 @@ ul   { list-style:none }
 .rcard__icon svg { position:relative; z-index:2; width:45px; height:45px; stroke:var(--plum); fill:none; stroke-width:1; stroke-linecap:round; stroke-linejoin:round }
 .rcard__icon.icon-c1{--icon-bg-color:#E2A7C8}.rcard__icon.icon-c2{--icon-bg-color:#A7ADE2}.rcard__icon.icon-c3{--icon-bg-color:#DBE2A7}.rcard__icon.icon-c4{--icon-bg-color:#B4E2A7}.rcard__icon.icon-c5{--icon-bg-color:#E2A7A7}.rcard__icon.icon-c6{--icon-bg-color:#A7C5E2}.rcard__icon.icon-c7{--icon-bg-color:#E2C6A7}.rcard__icon.icon-c8{--icon-bg-color:#C1A7E2}
 .rcard h5    { font-family:var(--font-display); font-size:18px; font-weight:700; color:var(--plum); margin-bottom:10px; line-height:1.4 }
-.rcard p     { font-size:16px; color:#666; line-height:1.65; margin-bottom:18px; flex:1 }
+.rcard p     { font-size:16px; color:#666; line-height:1.7; margin-bottom:18px; flex:1 }
 .rcard__lnk  { font-family:var(--font-body); font-size:16px; font-weight:500; color:var(--purple); display:inline-flex; align-items:center; gap:4px; text-decoration:none; transition:color var(--t); margin-top:auto }
 .rcard__lnk:hover { color:var(--purple-hover) }
 
