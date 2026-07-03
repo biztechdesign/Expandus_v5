@@ -513,6 +513,11 @@ ul   { list-style:none }
   font-size: 13px; font-weight:700;
   letter-spacing: 0.16em; text-transform:uppercase;
   color: var(--coral);
+  display:inline-flex; align-items:center;
+  padding:6px 16px;
+  border:1.5px solid var(--coral);
+  border-radius:var(--radius-pill);
+  background:var(--coral-tint);
 }
 .hero__h1 { margin-bottom:18px; letter-spacing:-.02em }
 .hero__h1 span { color:var(--coral) }
