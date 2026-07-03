@@ -190,6 +190,8 @@ ul   { list-style:none }
 .sec__hd { text-align:center; margin-bottom:52px }
 .sec__hd h2 { margin-bottom:10px }
 .sec__hd p  { max-width:760px; margin:0 auto; font-size:18px; color:var(--gray-600) }
+.sec__desc  { font-size:18px; line-height:1.75; color:var(--gray-600) }
+.sec--dark .sec__desc, .fcta__left .sec__desc { color:rgba(255,255,255,.65) }
 .sec--dark .sec__hd h2 { color:#fff }
 .sec--dark .sec__hd p  { color:rgba(255,255,255,.6) }
 
@@ -474,7 +476,9 @@ ul   { list-style:none }
 .nav__mobile a:hover,
 .nav__mobile button:hover { color:var(--purple) }
 .nav__mobile .m-ctas { display:flex; flex-direction:column; gap:12px; margin-top:24px }
-.nav__mobile .m-ctas .btn { justify-content:center }
+.nav__mobile .m-ctas .btn { justify-content:center; display:inline-flex; width:auto; border-bottom:none; padding:0 20px; padding-right:8px }
+.nav__mobile .m-ctas .btn--coral-cta { background:var(--coral); color:#fff; border:1px solid var(--coral) }
+.nav__mobile .m-ctas .btn--coral-cta:hover { background:var(--coral-tint); color:var(--coral); border-color:var(--coral) }
 
 /* ══════════════════════════════════════
    9. HERO
@@ -763,7 +767,7 @@ ul   { list-style:none }
 .events .sec__hd       { text-align:left; margin-bottom:0 }
 .events__hdr           { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:flex-start; margin-bottom:36px }
 .hd-desc-row           { display:flex; align-items:flex-start; gap:20px }
-.hd-desc-row p         { flex:1; font-size:18px; line-height:1.6; margin:0 }
+.hd-desc-row p         { flex:1; margin:0 }
 .events .hd-desc-row p { color:rgba(255,255,255,.7) }
 
 .carousel-nav  { display:flex; gap:8px; flex-shrink:0; padding-top:2px }
@@ -838,7 +842,7 @@ ul   { list-style:none }
 }
 .wwd__content { order:-1 }
 @keyframes wwd-spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-.wwd__content>p { font-size:18px; color:#666; line-height:1.75; margin-bottom:32px }
+.wwd__content>p { color:#666; margin-bottom:32px }
 .wwd__content h2 { margin-bottom:16px }
 
 .wwd__steps      { display:grid; grid-template-columns:repeat(4,1fr); gap:32px }
@@ -855,7 +859,7 @@ ul   { list-style:none }
   --icon-bg-color: #B8DFA3;
   position:relative; width:58px; height:58px;
   display:inline-flex; align-items:center; justify-content:center;
-  flex-shrink:0; color:var(--icon-color);
+  flex-shrink:0; color:var(--icon-color); overflow:hidden;
 }
 .wwd__feat-icon::before {
   content:''; position:absolute; width:35px; height:35px;
@@ -1000,7 +1004,7 @@ ul   { list-style:none }
 .fcta__left    { flex:0 0 62%; background:var(--plum); padding:28px 40px; display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden; isolation:isolate }
 .fcta__left .eyebrow { color:var(--coral) }
 .fcta__left h2 { color:#fff; font-size:clamp(32px,3.5vw,var(--text-h2)); margin-bottom:10px; letter-spacing:-.02em; line-height:var(--lh-h2) }
-.fcta__left p  { color:rgba(255,255,255,.65); font-size:18px; max-width:560px; margin-bottom:20px; line-height:1.75 }
+.fcta__left p  { color:rgba(255,255,255,.65); max-width:560px; margin-bottom:20px }
 .fcta__actions { display:flex; flex-direction:row; align-items:center; gap:12px; flex-wrap:wrap }
 .fcta__right   { flex:1; position:relative; overflow:hidden }
 .fcta__right::before { content:''; position:absolute; inset:0; background:linear-gradient(to right,var(--plum) 0%,rgba(44,22,80,.4) 40%,transparent 70%); z-index:1 }
@@ -1027,7 +1031,7 @@ ul   { list-style:none }
 .footer__grid      { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px }
 .footer__brand img { height:36px; margin-bottom:16px }
 .footer__brand p   { font-size:16px; color:rgba(255,255,255,.45); line-height:1.7; max-width:270px }
-.footer__social    { display:flex; gap:10px; margin-top:18px }
+.footer__social    { display:flex; gap:10px; margin:10px 0 20px }
 .footer__social a  { width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,.18); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.45); transition:all var(--t) }
 .footer__social a:hover { border-color:rgba(255,255,255,.55); color:#fff }
 .footer__social svg { width:15px; height:15px }
@@ -1138,6 +1142,9 @@ ul   { list-style:none }
 @media(max-width:991px){
   .hero{background-image:none;background-color:#e8e0f5;height:auto}
   .hero__content{max-width:100%;text-align:center}
+  .hero__actions{justify-content:center}
+  .hero__trust{justify-content:center}
+  .hero__eyebrow{text-align:center}
 }
 
 @media(max-width:768px){
@@ -1158,6 +1165,8 @@ ul   { list-style:none }
   .fcta__left p{max-width:100%}
   .fcta__actions{justify-content:center}
   .sec{padding:40px 0}
+  .rdt__insight{text-align:left}
+  .rdt__insight__call{text-align:left}
   .wwd__layout{grid-template-columns:1fr;margin-bottom:0}
   .wwd__left{display:none}
   .wwd__content{text-align:center}
@@ -1179,12 +1188,15 @@ ul   { list-style:none }
   .ind__grid{grid-template-columns:1fr}
   .icard__hover{max-height:none!important;opacity:1!important}
   .icard__title{margin-bottom:10px}
+  .icard__overlay{background:linear-gradient(to top,rgba(10,5,25,0.95) 0%,rgba(10,5,25,0.75) 50%,rgba(10,5,25,0.35) 100%)}
   .footer__grid{grid-template-columns:1fr}
   .footer__col h6{display:flex;justify-content:space-between;align-items:center;cursor:pointer;margin-bottom:0;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1)}
+  .footer__col:last-child h6{border-bottom:none}
   .footer__col h6::after{content:'+';font-size:20px;font-weight:400;transition:transform 0.25s}
   .footer__col.open h6::after{content:'-'}
   .footer__links{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.25s}
   .footer__col.open .footer__links{max-height:400px;padding-top:12px}
+  .footer__grid{gap:0}
   .hero__grid{padding:28px 16px}
   .hero__actions .btn{font-size:13px;padding:0 16px}
   .hero__trust{grid-template-columns:1fr 1fr!important;gap:12px!important}
@@ -1204,7 +1216,7 @@ ul   { list-style:none }
   .logos{padding:0 12px}
   .tstrip__item{padding:14px 0}
   .ecard{flex:0 0 calc((100% - 8px) / 1.5)}
-  .tcard{flex:0 0 calc((100% - 48px) / 1.5)}
-  .footer__grid{gap:24px}
+  .tcard{flex:0 0 calc((100% - 48px) / 1.15)}
+
   .wrap{padding:0 16px}
 }
