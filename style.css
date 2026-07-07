@@ -673,7 +673,7 @@ ul   { list-style:none }
    10. LOGOS STRIP
 ══════════════════════════════════════ */
 .logos {
-  margin-top:40px; margin-bottom:24px;
+  margin-top:24px; margin-bottom:24px;
   max-width:var(--container-max); margin-left:auto; margin-right:auto;
   padding:0 var(--container-pad); overflow:hidden;
   background:#fff;
@@ -1338,6 +1338,29 @@ ul   { list-style:none }
 .page-hero__h1 span { color:var(--coral) }
 .page-hero__sub     { color:rgba(255,255,255,.72); max-width:620px; margin-bottom:20px }
 .page-hero__desc    { color:#fff; line-height:1.8 }
+
+/* Metrics Bar */
+.metrics-bar                    { background:#fff; padding:32px 0 }
+.metrics-bar__list              { display:flex; align-items:stretch; list-style:none; margin:0; padding:0; gap:16px }
+/* Card */
+.metrics-bar__item              { display:flex; align-items:center; gap:16px; flex:1; padding:20px 24px; background:#221331; border-radius:var(--r-md,12px) }
+/* Icon — matches .wwd__feat-icon blob style, light blob on dark bg */
+.metrics-bar__icon              { --icon-bg-color:rgba(255,255,255,.15); position:relative; width:58px; height:58px; display:flex; align-items:center; justify-content:center; align-self:center; flex-shrink:0; overflow:hidden }
+.metrics-bar__icon::before      { content:''; position:absolute; width:35px; height:35px; background:var(--icon-bg-color); border-radius:24px 0 24px 24px; z-index:1; bottom:0; right:0 }
+.metrics-bar__icon svg          { position:relative; z-index:2; width:32px; height:32px; stroke:#fff; fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round }
+.metrics-bar__item:nth-child(1) .metrics-bar__icon { --icon-bg-color:#E2A7C8 }
+.metrics-bar__item:nth-child(2) .metrics-bar__icon { --icon-bg-color:#A7ADE2 }
+.metrics-bar__item:nth-child(3) .metrics-bar__icon { --icon-bg-color:#DBE2A7 }
+.metrics-bar__item:nth-child(4) .metrics-bar__icon { --icon-bg-color:#B4E2A7 }
+/* Typography */
+.metrics-bar__text              { display:flex; flex-direction:column; gap:4px }
+.metrics-bar__text strong       { font-family:var(--font-h); font-size:var(--text-h5); line-height:var(--lh-h5); font-weight:700; color:#fff }
+.metrics-bar__text span         { font-size:var(--text-body); line-height:var(--lh-body); font-weight:500; color:rgba(255,255,255,.6) }
+
+@media(max-width:640px) {
+  .metrics-bar__list  { flex-wrap:wrap }
+  .metrics-bar__item  { flex:1 1 calc(50% - 8px) }
+}
 
 /* Breadcrumb — page trail navigation */
 .breadcrumb         { display:flex; align-items:center; gap:6px; flex-wrap:wrap }
