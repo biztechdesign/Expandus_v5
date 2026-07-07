@@ -1334,7 +1334,7 @@ ul   { list-style:none }
 .page-hero__content { margin: 40px 0 }
 .page-hero__img     { display:flex; justify-content:flex-end; align-items:flex-end }
 .page-hero__img img { width:100%; max-width:300px; max-height:300px; object-fit:contain; display:block }
-.page-hero__h1      { max-width:800px; margin-bottom:16px }
+.page-hero__h1      { max-width:800px; margin-bottom:16px; white-space:nowrap }
 .page-hero__h1 span { color:var(--coral) }
 .page-hero__sub     { color:rgba(255,255,255,.72); max-width:620px; margin-bottom:20px }
 .page-hero__desc    { color:#fff; line-height:1.8 }
