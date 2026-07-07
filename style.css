@@ -1341,7 +1341,7 @@ ul   { list-style:none }
 
 /* Metrics Bar */
 .metrics-bar                    { background:#fff; padding:32px 0 }
-.metrics-bar__list              { display:flex; align-items:stretch; list-style:none; margin:0; padding:0; gap:16px }
+.metrics-bar__list              { display:flex; align-items:center; list-style:none; margin:0; padding:0; gap:16px }
 /* Card */
 .metrics-bar__item              { display:flex; align-items:center; gap:16px; flex:1; padding:20px 24px; background:#221331; border-radius:var(--r-md,12px) }
 /* Icon — matches .wwd__feat-icon blob style, light blob on dark bg */
