@@ -717,7 +717,7 @@ ul   { list-style:none }
   pointer-events:none;
 }
 .tstrip__inner { display:flex; align-items:stretch; max-width:100%; margin:0; padding:40px 0; background:var(--gray-50); border-radius:var(--radius-lg) 0 var(--radius-lg) var(--radius-lg); position:relative }
-.tstrip__item  { flex:1; padding:0 28px }
+.tstrip__item  { flex:1; padding:0 20px }
 .tstrip__div   { width:1px; background:#DDDDDD; flex-shrink:0 }
 .tstrip__heading { display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap }
 .tstrip__from  { font-family:var(--font-h); font-size:16px; font-weight:700; color:var(--plum) }
