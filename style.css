@@ -817,7 +817,7 @@ ul   { list-style:none }
 .rdt__stage:not(:first-child)::before {
   content:'›'; position:absolute; left:0; top:50%; transform:translate(-50%,-50%);
   width:32px; height:32px; background:#F0F2F5; border:1px solid var(--gray-200);
-  border-radius:50%; font-size:30px; color:var(--gray-400);
+  border-radius:50%; font-size:30px; color:var(--text-heading);
   display:flex; align-items:center; justify-content:center; line-height:32px; z-index:2;
 }
 .rdt__stage--chasm { background:var(--coral-tint); border-left:2px solid var(--coral); border-right:2px solid var(--coral) }
