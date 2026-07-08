@@ -716,11 +716,11 @@ ul   { list-style:none }
   background:url('img/shape.svg') top right / 100% 100% no-repeat;
   pointer-events:none;
 }
-.tstrip__inner { display:flex; align-items:stretch; max-width:100%; margin:0; padding:40px 0; background:var(--plum); border-radius:var(--radius-lg) 0 var(--radius-lg) var(--radius-lg); position:relative }
+.tstrip__inner { display:flex; align-items:stretch; max-width:100%; margin:0; padding:40px 0; background:var(--gray-50); border-radius:var(--radius-lg) 0 var(--radius-lg) var(--radius-lg); position:relative }
 .tstrip__item  { flex:1; padding:0 28px }
-.tstrip__div   { width:1px; background:rgba(255,255,255,.15); flex-shrink:0 }
+.tstrip__div   { width:1px; background:#DDDDDD; flex-shrink:0 }
 .tstrip__heading { display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap }
-.tstrip__from  { font-family:var(--font-h); font-size:16px; font-weight:700; color:#fff }
+.tstrip__from  { font-family:var(--font-h); font-size:16px; font-weight:700; color:var(--plum) }
 .tstrip__arrow { color:var(--coral); font-size:16px; font-weight:700 }
 .tstrip__to    { font-family:var(--font-h); font-size:16px; font-weight:700; color:var(--coral) }
 .tstrip__desc  { line-height:1.6; margin:0 }
@@ -1021,7 +1021,10 @@ ul   { list-style:none }
 .icard__hover   { overflow:hidden; max-height:0; opacity:0; transition:max-height 0.4s ease,opacity 0.3s ease }
 .icard:hover .icard__hover { max-height:160px; opacity:1 }
 .icard__hover p { color:rgba(255,255,255,0.82); line-height:1.7; margin:0 0 16px }
-.icard__link    { }
+.icard__link    { color: #fff }
+.icard__link:hover { color: rgba(255,255,255,0.75) }
+.icard__hover .link-arrow { color: #fff }
+.icard__hover .link-arrow:hover { color: rgba(255,255,255,0.75) }
 
 /* ══════════════════════════════════════
    18. SUCCESS STORIES / TESTIMONIALS
@@ -1158,7 +1161,7 @@ ul   { list-style:none }
   .stats__div{display:none}
   .stats__inner{gap:28px}
   .tstrip__inner{flex-direction:column;gap:0;padding:0 20px}
-  .tstrip__item{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .tstrip__item{padding:16px 0;border-bottom:1px solid #DDDDDD}
   .tstrip__item:last-child{border-bottom:none}
   .tstrip__div{display:none}
   .hero__grid{padding:40px 20px}
