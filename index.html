@@ -6,7 +6,7 @@
 <title>Expandus — Build a Business That Scales Beyond You</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Manrope:wght@700;800&family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&family=Cormorant+Garamond:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&family=Cormorant+Garamond:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
@@ -1172,7 +1172,7 @@
       primary:'#AC7601', hover:'#7A5110', tint:'#F5EDD6',
       accent:'#C99569',  accentH:'#B07A4E', accentT:'#FAF3EC',
       plum:'#0F1F31',    plumS:'#183654',   plumD:'#061018', heroBg:'#091B2C',
-      sectionBg:'#FAF4E4', border:'#E5D4A8', iconMuted:'#9B847A', heroDark:true, metricsBg:'#AC7601', footerGlow:'rgba(24,54,84,.45)', eventsGlow:'#4f3e1e' },
+      sectionBg:'#FAF4E4', border:'#E5D4A8', iconMuted:'#9B847A', heroDark:true, metricsBg:'#AC7601', footerGlow:'rgba(24,54,84,.45)', eventsGlow:'rgb(16,27,81)' },
     /* Option 4 — Golden Amber + Warm Dark
        primary   = Golden Amber   #D4962A  (CTAs & highlights)
        accent    = Deep Amber     #C8851E  (secondary CTAs)
@@ -1183,7 +1183,7 @@
       primary:'#D4962A', hover:'#B5800F', tint:'#FBF0D8',
       accent:'#C8851E',  accentH:'#A86E0A', accentT:'#FAF0E4',
       plum:'#1C1810',    plumS:'#28220F',   plumD:'#0E0C06', heroBg:'#1C1810',
-      sectionBg:'#FBF5E4', border:'#E8D5A0', iconMuted:'#A08858', heroDark:true, metricsBg:'#D4962A', footerGlow:'rgba(28,24,16,.5)', eventsGlow:'#4f3e1e' },
+      sectionBg:'#FBF5E4', border:'#E8D5A0', iconMuted:'#A08858', heroDark:true, metricsBg:'#D4962A', footerGlow:'#4b3f27', eventsGlow:'#4b3f27' },
     /* Option 5 — Warm Beige / Brown / Maroon
        primary   = Warm Brown  #8D6F57  (CTAs & highlights)
        accent    = Light Brown #A07C64  (secondary CTAs)
@@ -1212,10 +1212,12 @@
       dFont:"'Cormorant Garamond', serif",        bFont:"'Work Sans', sans-serif",url:null }
   ];
 
-  /* ── STATE ── */
+  /* ── STATE (defaults: Option 2 palette, Manrope font) ── */
   var root    = document.documentElement;
-  var palId   = localStorage.getItem('tsw-palette') || 'signature';
-  var fontId  = localStorage.getItem('tsw-font')    || 'brand';
+  var DEFAULT_PAL  = 'option2';
+  var DEFAULT_FONT = 'manrope';
+  var palId   = localStorage.getItem('tsw-palette') || DEFAULT_PAL;
+  var fontId  = localStorage.getItem('tsw-font')    || DEFAULT_FONT;
 
   /* ── NODES ── */
   var widget  = document.getElementById('themeSwitcher');
@@ -1374,7 +1376,7 @@
 
   /* ── RESET ── */
   resetBtn.addEventListener('click', function(){
-    palId = 'signature'; fontId = 'brand';
+    palId = DEFAULT_PAL; fontId = DEFAULT_FONT;
     localStorage.removeItem('tsw-palette'); localStorage.removeItem('tsw-font');
     var toRemove = ['--color-purple','--color-purple-hover','--color-purple-tint',
       '--color-coral','--color-coral-hover','--color-coral-tint',
@@ -1389,11 +1391,15 @@
       '--font-display','--font-body','--font-h','--font-b'];
     toRemove.forEach(function(p){ root.style.removeProperty(p); });
     document.documentElement.removeAttribute('data-palette');
+    var defPal  = PALETTES.filter(function(p){ return p.id === DEFAULT_PAL; })[0];
+    var defFont = FONTS.filter(function(f){ return f.id === DEFAULT_FONT; })[0];
+    if(defPal  && defPal.id  !== 'signature') applyPalette(defPal);
+    if(defFont && defFont.id !== 'brand')     applyFont(defFont);
     palCont.querySelectorAll('.tsw__palette').forEach(function(b){
-      b.classList.toggle('active', b.getAttribute('data-id') === 'signature');
+      b.classList.toggle('active', b.getAttribute('data-id') === DEFAULT_PAL);
     });
     fntCont.querySelectorAll('.tsw__font-opt').forEach(function(b){
-      b.classList.toggle('active', b.getAttribute('data-id') === 'brand');
+      b.classList.toggle('active', b.getAttribute('data-id') === DEFAULT_FONT);
     });
   });
 

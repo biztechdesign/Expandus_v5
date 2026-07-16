@@ -25,6 +25,7 @@
   --color-coral:        #F04F53;
   --color-coral-hover:  #D83A3E;
   --color-coral-tint:   #FEEDED;
+  --chasm-red:          #F04F53; /* fixed — CHASM divider stays red in every palette */
   --color-plum:         #221331;
   --color-plum-soft:    #34204A;
   --color-plum-deep:    #160B22;
@@ -925,9 +926,9 @@ body { padding-top: 72px }
   content:'›'; position:absolute; left:0; top:50%; transform:translate(-50%,-50%);
   width:32px; height:32px; background:var(--gray-50); border:1px solid var(--gray-200);
   border-radius:50%; font-size:30px; color:var(--text-heading);
-  display:flex; align-items:center; justify-content:center; line-height:32px; z-index:2;
+  display:flex; align-items:center; justify-content:center; line-height:31px; z-index:2;
 }
-.rdt__stage--chasm { background:transparent; border-left:1px solid var(--gray-200); border-right:2px dotted var(--coral) }
+.rdt__stage--chasm { background:transparent; border-left:1px solid var(--gray-200); border-right:2px dotted var(--chasm-red) }
 .rdt__stage--chasm::before  { border-color:var(--gray-200)!important; color:var(--gray-500)!important }
 .rdt__stage--chasm:hover    { background:var(--gray-50) }
 
@@ -955,7 +956,7 @@ body { padding-top: 72px }
 .rdt__stage--chasm .rdt__stage__desc>li::before { color:var(--purple) }
 
 /* Separator after the chasm (stage 5 only) — red dotted */
-.rdt__stage--chasm + .rdt__stage::before { border:2px dotted var(--coral)!important; color:var(--coral)!important; background:var(--gray-50)!important }
+.rdt__stage--chasm + .rdt__stage::before { border:2px dotted var(--chasm-red)!important; color:var(--chasm-red)!important; background:var(--gray-50)!important }
 
 /* Vertical "CHASM" label on the red dashed separator line */
 .rdt__stage--chasm::after {
@@ -970,7 +971,7 @@ body { padding-top: 72px }
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--chasm-red);
   background: var(--surface-page);
   padding: 8px 2px;
   z-index: 3;
@@ -1646,7 +1647,7 @@ body { padding-top: 72px }
 .metrics-bar                    { background:var(--metrics-bar-bg, var(--plum)); padding:0 }
 .metrics-bar__list              { display:flex; align-items:center; list-style:none; margin:0; padding:0; gap:16px }
 /* Card */
-.metrics-bar__item              { display:flex; align-items:center; gap:16px; flex:1; padding:20px 24px; background:var(--metrics-bar-bg, var(--plum)); border-radius:var(--r-md,12px); border-right:1px solid rgba(255,255,255,.15) }
+.metrics-bar__item              { display:flex; align-items:center; gap:16px; flex:1; padding:20px 24px; background:var(--metrics-bar-bg, var(--plum)); border-right:1px solid rgba(255,255,255,.15) }
 .metrics-bar__item:last-child   { border-right:none }
 /* Icon — matches .wwd__feat-icon blob style, light blob on dark bg */
 .metrics-bar__icon              { --icon-bg-color:rgba(255,255,255,.15); position:relative; top:-8px; width:58px; height:58px; display:flex; align-items:center; justify-content:center; align-self:center; flex-shrink:0; overflow:hidden }
@@ -1847,7 +1848,8 @@ body { padding-top: 72px }
 
 .tsw__panel {
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   right: 44px;
   width: 0;
   overflow: hidden;
@@ -1864,7 +1866,8 @@ body { padding-top: 72px }
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-height: 80vh;
+  max-height: calc(100vh - 24px);
+  max-height: min(80vh, calc(100dvh - 24px));
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--color-gray-300) transparent;
