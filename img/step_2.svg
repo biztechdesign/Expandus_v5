@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" role="img" aria-labelledby="title">
+  <title id="title">Business step 2: red and blue circles</title>
+  <circle cx="11" cy="23" r="7.5" fill="#C00000"/>
+  <circle cx="20" cy="12.5" r="7.5" fill="#4F81BD"/>
+</svg>

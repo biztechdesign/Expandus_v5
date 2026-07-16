@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 78" role="img" aria-labelledby="title">
+  <title id="title">Business step 4: central red hub connected to six blue circles</title>
+  <g stroke="#5C718A" stroke-width="4" stroke-linecap="round" fill="none">
+    <line x1="39" y1="39" x2="25" y2="18"/>
+    <line x1="39" y1="39" x2="53" y2="18"/>
+    <line x1="39" y1="39" x2="12" y2="39"/>
+    <line x1="39" y1="39" x2="66" y2="39"/>
+    <line x1="39" y1="39" x2="25" y2="60"/>
+    <line x1="39" y1="39" x2="53" y2="60"/>
+  </g>
+  <circle cx="25" cy="18" r="8" fill="#4F81BD"/>
+  <circle cx="53" cy="18" r="8" fill="#4F81BD"/>
+  <circle cx="12" cy="39" r="8" fill="#4F81BD"/>
+  <circle cx="66" cy="39" r="8" fill="#4F81BD"/>
+  <circle cx="25" cy="60" r="8" fill="#4F81BD"/>
+  <circle cx="53" cy="60" r="8" fill="#4F81BD"/>
+  <circle cx="39" cy="39" r="9" fill="#C00000"/>
+</svg>

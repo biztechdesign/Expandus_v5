@@ -565,6 +565,56 @@
 </footer>
 
 <script>
+(function () {
+  'use strict';
+  var nav = document.querySelector('.nav');
+  if (!nav) return;
+
+  var NAV_H    = 72;
+  var lastY    = Math.max(0, window.scrollY);
+  var ticking  = false;
+
+  function isMobileMenuOpen() {
+    var m = document.getElementById('mobileNav');
+    return m && m.classList.contains('open');
+  }
+
+  function update() {
+    var y = Math.max(0, window.scrollY);
+
+    if (y <= NAV_H) {
+      nav.classList.remove('nav--hidden');
+    } else if (!isMobileMenuOpen()) {
+      if (y > lastY) {
+        nav.classList.add('nav--hidden');
+      } else if (y < lastY) {
+        nav.classList.remove('nav--hidden');
+      }
+    }
+
+    lastY   = y;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    requestAnimationFrame(function () {
+      lastY = Math.max(0, window.scrollY);
+      nav.classList.remove('nav--hidden');
+    });
+  });
+})();
+</script>
+
+<script>
 (function(){
   function initFooterAccordion(){
     var cols = document.querySelectorAll('.footer__col');

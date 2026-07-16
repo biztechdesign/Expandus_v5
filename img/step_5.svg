@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 78" role="img" aria-labelledby="title">
+  <title id="title">Business step 5: hexagon ring with one red node</title>
+  <path d="M 25 18 L 53 18 L 66 39 L 53 60 L 25 60 L 12 39 Z" fill="none" stroke="#5C718A" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="25" cy="18" r="8" fill="#4F81BD"/>
+  <circle cx="53" cy="18" r="8" fill="#C00000"/>
+  <circle cx="66" cy="39" r="8" fill="#4F81BD"/>
+  <circle cx="53" cy="60" r="8" fill="#4F81BD"/>
+  <circle cx="25" cy="60" r="8" fill="#4F81BD"/>
+  <circle cx="12" cy="39" r="8" fill="#4F81BD"/>
+</svg>

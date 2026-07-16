@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" role="img" aria-labelledby="title">
+  <title id="title">Business step 6: blue hexagon ring with a separate red node</title>
+  <path d="M 25 25 L 53 25 L 66 46 L 53 67 L 25 67 L 12 46 Z" fill="none" stroke="#5C718A" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="25" cy="25" r="8" fill="#4F81BD"/>
+  <circle cx="53" cy="25" r="8" fill="#4F81BD"/>
+  <circle cx="66" cy="46" r="8" fill="#4F81BD"/>
+  <circle cx="53" cy="67" r="8" fill="#4F81BD"/>
+  <circle cx="25" cy="67" r="8" fill="#4F81BD"/>
+  <circle cx="12" cy="46" r="8" fill="#4F81BD"/>
+  <circle cx="72" cy="10" r="8" fill="#C00000"/>
+</svg>
