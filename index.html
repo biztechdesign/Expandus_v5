@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Manrope:wght@700;800&family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&family=Cormorant+Garamond:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -129,6 +129,9 @@
       </div>
     </div>
 
+    <div class="hero__visual">
+      <img class="hero__img" src="img/hero.svg" alt="Business growth network illustration">
+    </div>
 
     <!-- Journey Chart (hidden) -->
     <div class="jchart hidden">
@@ -1132,7 +1135,7 @@
     { id:'signature', name:'Signature',
       primary:'#643695', hover:'#50276F', tint:'#F1ECF8',
       accent:'#F04F53',  accentH:'#D83A3E', accentT:'#FEEDED',
-      plum:'#221331',    plumS:'#34204A',   plumD:'#160B22', heroBg:'#e8e0f5' },
+      plum:'#221331',    plumS:'#34204A',   plumD:'#160B22', heroBg:'#221331', heroDark:true, metricsBg:'#643695', eventsGlow:'rgba(110,50,200,.4)' },
     /* Option 1 — Image 1 client palette
        primary   = Primary Teal  #217D81  (CTA Buttons & Highlights)
        accent    = Logo Coral    #F05356  (Logo Accent / secondary CTA)
@@ -1147,7 +1150,7 @@
       accent:'#F05356',  accentH:'#D73A3E', accentT:'#FEEDED',
       plum:'#0A0E21',    plumS:'#1B3F4F',   plumD:'#060911', heroBg:'#101D38',
       sectionBg:'#EFFAFA', border:'#DCE4E5', iconMuted:'#AEB3B6', heroDark:true,
-      glowRgb:'97,53,154', metricsBg:'#217D81', footerGlow:'rgba(27,63,79,.45)' },
+      glowRgb:'97,53,154', metricsBg:'#217D81', footerGlow:'rgba(27,63,79,.45)', eventsGlow:'rgb(17,30,95)' },
     /* Option 2 — Image 2 client palette
        primary   = Premium Bronze     #B6845C  (Primary Accent / CTAs)
        hover     = Copper Bronze      #A57B62
@@ -1163,13 +1166,35 @@
       primary:'#B6845C', hover:'#A57B62', tint:'#F8F0E8',
       accent:'#C99569',  accentH:'#B07A4E', accentT:'#FAF3EC',
       plum:'#0F1F31',    plumS:'#183654',   plumD:'#061018', heroBg:'#091B2C',
-      sectionBg:'#FAF3EC', border:'#E6D4BC', iconMuted:'#9B847A', heroDark:true, metricsBg:'#B6845C', footerGlow:'rgba(24,54,84,.45)' },
+      sectionBg:'#FAF3EC', border:'#E6D4BC', iconMuted:'#9B847A', heroDark:true, metricsBg:'#B6845C', footerGlow:'rgba(24,54,84,.45)', eventsGlow:'rgb(16,27,81)' },
     /* Option 3 — same palette as Option 2, primary swapped to Dark Amber #946113 */
     { id:'option3', name:'Option 3',
-      primary:'#946113', hover:'#7A5110', tint:'#F5EDD6',
+      primary:'#AC7601', hover:'#7A5110', tint:'#F5EDD6',
       accent:'#C99569',  accentH:'#B07A4E', accentT:'#FAF3EC',
       plum:'#0F1F31',    plumS:'#183654',   plumD:'#061018', heroBg:'#091B2C',
-      sectionBg:'#FAF4E4', border:'#E5D4A8', iconMuted:'#9B847A', heroDark:true, metricsBg:'#946113', footerGlow:'rgba(24,54,84,.45)' }
+      sectionBg:'#FAF4E4', border:'#E5D4A8', iconMuted:'#9B847A', heroDark:true, metricsBg:'#AC7601', footerGlow:'rgba(24,54,84,.45)', eventsGlow:'#4f3e1e' },
+    /* Option 4 — Golden Amber + Warm Dark
+       primary   = Golden Amber   #D4962A  (CTAs & highlights)
+       accent    = Deep Amber     #C8851E  (secondary CTAs)
+       plum      = Warm Near-Black #1C1810  (dark sections & hero)
+       sectionBg = Soft Cream     #FBF5E4  (alternate section bg)
+       border    = Warm Sand      #E8D5A0  (cards & dividers) */
+    { id:'option4', name:'Option 4',
+      primary:'#D4962A', hover:'#B5800F', tint:'#FBF0D8',
+      accent:'#C8851E',  accentH:'#A86E0A', accentT:'#FAF0E4',
+      plum:'#1C1810',    plumS:'#28220F',   plumD:'#0E0C06', heroBg:'#1C1810',
+      sectionBg:'#FBF5E4', border:'#E8D5A0', iconMuted:'#A08858', heroDark:true, metricsBg:'#D4962A', footerGlow:'rgba(28,24,16,.5)', eventsGlow:'#4f3e1e' },
+    /* Option 5 — Warm Beige / Brown / Maroon
+       primary   = Warm Brown  #8D6F57  (CTAs & highlights)
+       accent    = Light Brown #A07C64  (secondary CTAs)
+       plum      = Dark Maroon #3F0D0C  (dark sections & hero)
+       border    = Warm Beige  #D8D0C5  (cards & dividers)
+       sectionBg = Off-White   #F2EDE8  (alternate section bg) */
+    { id:'option5', name:'Option 5',
+      primary:'#8D6F57', hover:'#7A5E48', tint:'#EDE5DC',
+      accent:'#A07C64',  accentH:'#8A6852', accentT:'#F0E8E0',
+      plum:'#3F0D0C',    plumS:'#5A1A18',   plumD:'#260806', heroBg:'#3F0D0C',
+      sectionBg:'#F2EDE8', border:'#D8D0C5', iconMuted:'#A08878', heroDark:true, metricsBg:'#8D6F57', footerGlow:'rgba(63,13,12,.45)', eventsGlow:'rgb(121,14,11)' }
   ];
 
   var FONTS = [
@@ -1284,6 +1309,10 @@
     if(p.footerGlow){
       root.style.setProperty('--footer-glow-color', p.footerGlow);
     }
+    /* Events glow — palette-matched radial gradient centre colour */
+    if(p.eventsGlow){
+      root.style.setProperty('--events-glow-color', p.eventsGlow);
+    }
     /* Stamp palette id so CSS can target option1/option2 overrides */
     document.documentElement.setAttribute('data-palette', p.id);
   }
@@ -1356,7 +1385,7 @@
       '--color-gray-100','--color-gray-200','--color-gray-300','--gray-100','--gray-200','--gray-300',
       '--color-gray-400','--gray-400',
       '--hero-text-primary','--hero-text-muted','--hero-sep',
-      '--metrics-bar-bg','--footer-glow-color',
+      '--metrics-bar-bg','--footer-glow-color','--events-glow-color',
       '--font-display','--font-body','--font-h','--font-b'];
     toRemove.forEach(function(p){ root.style.removeProperty(p); });
     document.documentElement.removeAttribute('data-palette');
@@ -1460,6 +1489,35 @@
         if(e.key==='Escape'){ close(); btn.focus(); }
       });
     });
+  });
+})();
+</script>
+<script>
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var hero = document.querySelector('.hero');
+  var img  = document.querySelector('.hero__img');
+  if(!hero || !img) return;
+  var enabled = false;
+  var rafId   = null;
+  setTimeout(function(){ enabled = true; }, 700);
+  hero.addEventListener('mousemove', function(e){
+    if(!enabled || rafId) return;
+    var ex = e.clientX, ey = e.clientY;
+    rafId = requestAnimationFrame(function(){
+      rafId = null;
+      var r  = hero.getBoundingClientRect();
+      var nx = (ex - (r.left + r.width  / 2)) / (r.width  / 2);
+      var ny = (ey - (r.top  + r.height / 2)) / (r.height / 2);
+      img.style.transform =
+        'rotateY(' + (nx *  4.5).toFixed(2) + 'deg)' +
+        ' rotateX(' + (-ny * 3).toFixed(2) + 'deg)' +
+        ' translate3d(' + (nx * 10).toFixed(1) + 'px,' + (ny * 7).toFixed(1) + 'px, 0)';
+    });
+  });
+  hero.addEventListener('mouseleave', function(){
+    if(rafId){ cancelAnimationFrame(rafId); rafId = null; }
+    img.style.transform = '';
   });
 })();
 </script></body>
