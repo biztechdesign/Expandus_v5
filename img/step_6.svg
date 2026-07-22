@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" role="img" aria-labelledby="title">
-  <title id="title">Business step 6: blue hexagon ring with a separate red node</title>
-  <path d="M 25 25 L 53 25 L 66 46 L 53 67 L 25 67 L 12 46 Z" fill="none" stroke="#5C718A" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-  <circle cx="25" cy="25" r="8" fill="#4F81BD"/>
-  <circle cx="53" cy="25" r="8" fill="#4F81BD"/>
-  <circle cx="66" cy="46" r="8" fill="#4F81BD"/>
-  <circle cx="53" cy="67" r="8" fill="#4F81BD"/>
-  <circle cx="25" cy="67" r="8" fill="#4F81BD"/>
-  <circle cx="12" cy="46" r="8" fill="#4F81BD"/>
-  <circle cx="72" cy="10" r="8" fill="#C00000"/>
+<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 23H56L69 44L56 65H28L15 44L28 23Z" stroke="#5C718A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 31C32.4183 31 36 27.4183 36 23C36 18.5817 32.4183 15 28 15C23.5817 15 20 18.5817 20 23C20 27.4183 23.5817 31 28 31Z" fill="#4F81BD"/>
+<path d="M56 31C60.4183 31 64 27.4183 64 23C64 18.5817 60.4183 15 56 15C51.5817 15 48 18.5817 48 23C48 27.4183 51.5817 31 56 31Z" fill="#4F81BD"/>
+<path d="M69 52C73.4183 52 77 48.4183 77 44C77 39.5817 73.4183 36 69 36C64.5817 36 61 39.5817 61 44C61 48.4183 64.5817 52 69 52Z" fill="#4F81BD"/>
+<path d="M56 73C60.4183 73 64 69.4183 64 65C64 60.5817 60.4183 57 56 57C51.5817 57 48 60.5817 48 65C48 69.4183 51.5817 73 56 73Z" fill="#4F81BD"/>
+<path d="M28 73C32.4183 73 36 69.4183 36 65C36 60.5817 32.4183 57 28 57C23.5817 57 20 60.5817 20 65C20 69.4183 23.5817 73 28 73Z" fill="#4F81BD"/>
+<path d="M15 52C19.4183 52 23 48.4183 23 44C23 39.5817 19.4183 36 15 36C10.5817 36 7 39.5817 7 44C7 48.4183 10.5817 52 15 52Z" fill="#4F81BD"/>
+<path d="M75 16C79.4183 16 83 12.4183 83 8C83 3.58172 79.4183 0 75 0C70.5817 0 67 3.58172 67 8C67 12.4183 70.5817 16 75 16Z" fill="#C00000"/>
 </svg>
