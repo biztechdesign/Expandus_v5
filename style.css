@@ -929,7 +929,16 @@ body { padding-top: 72px }
 }
 .rdt-story__grid {
   display:grid;
-  grid-template-columns:20% 45% 35%;
+  /* fr, not %: percentage tracks sum to 100% of the grid box and then `gap` adds on
+     top of that, so the row's total content width exceeds the container and the last
+     column (the stage image) overflows past the grid's right edge. fr tracks share
+     out the width that's left AFTER gaps, so the same 20:45:35 proportions fit exactly. */
+  grid-template-columns:20fr 45fr 35fr;
+  /* Bounds the (implicit) row to the grid's own flexed height instead of letting it
+     auto-size to the tallest cell's content — without this, .rdt-story__media-frame's
+     aspect-ratio-driven height could inflate the row past the pin's available space
+     and get clipped by .rdt-story__pin's overflow:hidden on short viewports. */
+  grid-template-rows:minmax(0,1fr);
   gap:var(--space-2xl);
   align-items:stretch;
   width:100%;
@@ -943,11 +952,15 @@ body { padding-top: 72px }
 .rdt-story__media    { order:3 }
 
 /* Left — stage image (fills the row height, no fixed aspect ratio, so heading + row always fit one viewport) */
-.rdt-story__media { min-height:0; display:flex; align-items:flex-start }
-/* Square frame — matches the step SVGs' own 1:1 viewBox exactly, so
-   object-fit:contain fills it edge-to-edge with no transparent letterboxing. */
+.rdt-story__media { min-height:0; display:flex; align-items:flex-start; container-type:size }
+/* Square frame — matches the step SVGs' own 1:1 viewBox exactly, so object-fit:contain
+   fills it edge-to-edge with no transparent letterboxing. Sized to the smaller of the
+   column's width or the row's available height (via container query units) so the
+   square never grows past whichever axis is tighter — on short viewports that's the
+   height, and without this cap the frame overflowed .rdt-story__pin's clipped bottom
+   edge, cutting off whichever stage image was active. */
 .rdt-story__media-frame {
-  position:relative; width:100%; aspect-ratio:1/1; height:auto;
+  position:relative; width:min(100%, 100cqh); aspect-ratio:1/1; height:auto;
   border-radius:0; overflow:hidden;
   background:transparent;
 }
